@@ -1,0 +1,14 @@
+void:expr $
+expr:BCE expr1
+expr1:&& BCE expr1_|| BCE expr1_epsilon
+BCE:CE BCE1
+BCE1:== CE BCE1_!= CE BCE1_epsilon
+CE:E CE1
+CE1:< E CE1_> E CE1_<= E CE1_>= E CE1_epsilon
+E:T E1
+E1:+ T E1_- T E1_epsilon
+T:F T1
+T1:* F T1_/ F T1_epsilon
+F:( E )_num_id_id ( )_id ( arg arglist )
+arg:E
+arglist:, arg arglist_epsilon
