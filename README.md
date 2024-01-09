@@ -1,4 +1,4 @@
-# PA6_Advanced Java Continued
+# Java to Objective-C mini-compiler
 program:
 	* after check, program is
 	public class [ID] {...}
